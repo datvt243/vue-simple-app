@@ -1,0 +1,33 @@
+@charset "utf-8"
+
+input, textarea
+  +placeholder($placeholder)
+
+input, textarea, select
+  width: 100%
+  display: block
+  font:
+    weight: 400
+  line-height: 1.4
+  background:
+    color: #fff
+    clip: padding-box
+  &:focus
+    outline: 0
+
+.form
+
+  &-label
+    display: inline-block
+    margin-bottom: 5px
+
+  &-control
+    padding: 10px
+    font:
+      size: $base-font-size
+      weight: 400
+    color: #fefefe
+    border: 1px solid $border
+      radius: $radius
+    +transition(all)
+    +appearance(none)

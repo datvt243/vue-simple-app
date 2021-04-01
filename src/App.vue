@@ -1,28 +1,25 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+<template lang="pug">
+  #app
+    LayoutDefault
+      .container.pt-5(slot="content")
+        .row
+          .col-12.col-md-6
+            ContentInner
+          .col-12.col-md-6
+            ContentInner
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import LayoutDefault from "./layouts/LayoutDefault.vue";
+import ContentInner from "./components/ContentInner.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    LayoutDefault,
+    ContentInner,
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
